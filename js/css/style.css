@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+}
+
+.to-do-container {
+    text-align: center;
+    background-color: white;
+    padding: 25px 30px;
+    margin-top: 100px;
+    margin-left: 30%;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.5), rgba(0, 0, 255, 0.5));
+}
+
+.input-wrapper {
+    display: flex;
+    width: 100%;
+}
+
+.input-wrapper .addbtn {
+    background: linear-gradient(to right, rgba(54, 5, 96, 0.9), rgba(215, 91, 206, 0.9));
+    padding: 10px;
+    width: 25%;
+    font-size: 16px;
+    margin: 0; /* remove space */
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0;
+}
+
+.input-wrapper input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+.to-do-container > h2 {
+    text-align: center;
+}
+
+.list {
+    background-color: white;
+    padding: 25px 30px;
+    margin-top: 0px;
+    margin-left: 30%;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 400px;
+    background: linear-gradient(to right, rgba(161, 228, 149, 0.5), rgba(186, 95, 38, 0.5));
+}
+
+.list > ul {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul li:hover{
+    background: #ddd;
+}
+
+ul li.checked{
+    background: #888;
+    color:#fff;
+    text-decoration: line-through;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    /* Adds an empty pseudo-element before the content of the <li> if it has the checked class. */
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #656589;
+  color: white;
+}
